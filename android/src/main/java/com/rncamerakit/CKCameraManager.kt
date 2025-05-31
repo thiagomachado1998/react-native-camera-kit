@@ -118,15 +118,10 @@ class CKCameraManager : SimpleViewManager<CKCamera>(), CKCameraManagerInterface<
         view.setFrameColor(color ?: Color.GREEN)
     }
 
-    @ReactProp(name = "barcodeFrameSize")
-    override fun setBarcodeFrameSize(view: CKCamera, frameSize: ReadableMap?) {
-        if (frameSize == null || !frameSize.hasKey("width") || !frameSize.hasKey("height")) {
-            return
-        }
-        val width = frameSize.getInt("width")
-        val height = frameSize.getInt("height")
-        view.setBarcodeFrameSize(Size(width, height))
+     override fun setBarcodeFrameSize(view: CKCamera, frameSize: ReadableMap?) {
+     //nao utilizado
     }
+
 
     @ReactProp(name = "outputPath")
     override fun setOutputPath(view: CKCamera, path: String?) {
