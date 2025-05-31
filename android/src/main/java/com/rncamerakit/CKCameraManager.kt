@@ -138,10 +138,10 @@ class CKCameraManager : SimpleViewManager<CKCamera>(), CKCameraManagerInterface<
         view.setShutterAnimationDuration(duration)
     }
 
-    @ReactProp(name = "shutterPhotoSound")
-    override fun setShutterPhotoSound(view: CKCamera, enabled: Boolean) {
-        view.setShutterPhotoSound(enabled);
+    override fun setShutterPhotoSound(view: CKCamera, value: Boolean) {
+        //nao utilizado
     }
+
 
     // Methods only available on iOS
     override fun setRatioOverlay(view: CKCamera?, value: String?) = Unit
